@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276968042A692424005B7041 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 276968032A692424005B7041 /* SwiftUIIntrospect */; };
 		5B704CAF280E907C0000C65D /* AutosizingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B704CA8280E907C0000C65D /* AutosizingList.swift */; };
 		5B704CB0280E907C0000C65D /* ScalingHeaderScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B704CA9280E907C0000C65D /* ScalingHeaderScrollView.h */; };
 		5B704CB1280E907C0000C65D /* ScalingHeaderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B704CAA280E907C0000C65D /* ScalingHeaderScrollView.swift */; };
 		5B704CB2280E907C0000C65D /* ScalingHeaderScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B704CAC280E907C0000C65D /* ScalingHeaderScrollViewDelegate.swift */; };
 		5B704CB3280E907C0000C65D /* FrameGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B704CAD280E907C0000C65D /* FrameGetter.swift */; };
-		5B704CB7280E91460000C65D /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 5B704CB6280E91460000C65D /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B704CB7280E91460000C65D /* Introspect in Frameworks */,
+				276968042A692424005B7041 /* SwiftUIIntrospect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 			);
 			name = ScalingHeaderScrollView;
 			packageProductDependencies = (
-				5B704CB6280E91460000C65D /* Introspect */,
+				276968032A692424005B7041 /* SwiftUIIntrospect */,
 			);
 			productName = ScalingHeaderScrollView;
 			productReference = 5B704C9D280E90640000C65D /* ScalingHeaderScrollView.framework */;
@@ -116,7 +116,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					5B704C9C280E90640000C65D = {
 						CreatedOnToolsVersion = 13.3;
@@ -133,7 +133,7 @@
 			);
 			mainGroup = 5B704C93280E90640000C65D;
 			packageReferences = (
-				5B704CB5280E91460000C65D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				276968022A692424005B7041 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			productRefGroup = 5B704C9E280E90640000C65D /* Products */;
 			projectDirPath = "";
@@ -294,12 +294,14 @@
 		5B704CA5280E90640000C65D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -309,6 +311,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exyte.ScalingHeaderScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -321,12 +325,14 @@
 		5B704CA6280E90640000C65D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -336,6 +342,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = com.exyte.ScalingHeaderScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -369,21 +377,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5B704CB5280E91460000C65D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+		276968022A692424005B7041 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			repositoryURL = "https://github.com/siteline/swiftui-introspect#readme";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.4;
+				minimumVersion = 0.9.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5B704CB6280E91460000C65D /* Introspect */ = {
+		276968032A692424005B7041 /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5B704CB5280E91460000C65D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
+			package = 276968022A692424005B7041 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
